@@ -1,0 +1,17 @@
+{
+    "files.associations": {
+        "etimer.h": "c",
+        "board-peripherals.h": "c",
+        "bmp-280-sensor.h": "c",
+        "batmon-sensor.h": "c",
+        "button-sensor.h": "c",
+        "button-hal.h": "c",
+        "gpio-hal.h": "c",
+        "board.h": "c",
+        "ioc.h": "c",
+        "battery-sensor.h": "c",
+        "sensors.h": "c",
+        "light-sensor.h": "c",
+        "ti-lib.h": "c"
+    }
+}
