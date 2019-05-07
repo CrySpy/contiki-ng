@@ -55,7 +55,7 @@
  * The build system automatically compiles the resources in the corresponding sub-directory.
  */
 
-#define LOOP_INTERVAL       (CLOCK_SECOND * 10)
+#define LOOP_INTERVAL       (CLOCK_SECOND * 120)
 extern coap_resource_t
   res_hello,
   res_mirror,
