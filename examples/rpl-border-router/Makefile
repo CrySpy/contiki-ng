@@ -11,6 +11,8 @@ MODULES += os/services/rpl-border-router
 MODULES_REL += webserver
 # Include optional target-specific module
 include $(CONTIKI)/Makefile.identify-target
+MAKE_MAC = MAKE_MAC_TSCH
+MODULES += os/services/shell
 MODULES_REL += $(TARGET)
 
 include $(CONTIKI)/Makefile.include
