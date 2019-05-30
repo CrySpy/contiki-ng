@@ -55,17 +55,7 @@
  * The build system automatically compiles the resources in the corresponding sub-directory.
  */
 
-#define LOOP_INTERVAL       (CLOCK_SECOND * 120)
-extern coap_resource_t
-  res_hello,
-  res_mirror,
-  res_chunks,
-  res_separate,
-  res_push,
-  res_event,
-  res_sub,
-  res_b1_sep_b2;
-extern coap_resource_t res_leds, res_toggle;
+#define LOOP_INTERVAL       (CLOCK_SECOND * 60)
 extern coap_resource_t res_light;
 extern coap_resource_t res_battery;
 
@@ -87,11 +77,7 @@ PROCESS_THREAD(er_example_server, ev, data)
    * WARNING: Activating twice only means alternate path, not two instances!
    * All static variables are the same for each URI path.
    */
-  coap_activate_resource(&res_hello, "test/hello");
-  coap_activate_resource(&res_mirror, "debug/mirror");
-  coap_activate_resource(&res_chunks, "test/chunks");
-  coap_activate_resource(&res_separate, "test/separate");
-  coap_activate_resource(&res_push, "test/push");
+
   coap_activate_resource(&res_light, "sensors/light");
   SENSORS_ACTIVATE(opt_3001_sensor);
   coap_activate_resource(&res_battery, "sensors/battery");
@@ -101,8 +87,7 @@ PROCESS_THREAD(er_example_server, ev, data)
 
   
   /* Define application-specific events here. */
-  while(1) {
-    
+  while(1) {    
     PROCESS_WAIT_EVENT();
     if (ev == PROCESS_EVENT_TIMER) {
       if (data == &et) {
