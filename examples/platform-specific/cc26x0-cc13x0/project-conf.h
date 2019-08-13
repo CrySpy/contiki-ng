@@ -37,7 +37,12 @@
 /* Change to match your configuration */
 #define IEEE802154_CONF_PANID            0xABCD
 #define IEEE802154_CONF_DEFAULT_CHANNEL      25
-#define RF_BLE_CONF_ENABLED                   1
+#define RF_BLE_CONF_ENABLED                   0
+#define CC13XX_CONF_PROP_MODE		      1
+#define JOIN_MY_PANID_ONLY
+#define LLSEC802154_CONF_ENABLED	      1
+#define TSCH_CONF_JOIN_SECURED_ONLY	      1
+
 /*---------------------------------------------------------------------------*/
 #endif /* PROJECT_CONF_H_ */
 /*---------------------------------------------------------------------------*/
